@@ -23,13 +23,13 @@ import com.capgemini.customerapp.service.CustomerService;
 @RestController
 public class CustomerController {
 
-	/*Logger logger = LoggerFactory.getLogger(this.getClass());*/
+	//Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private CustomerService customerService;
 
 	@PostMapping("/customer")
 	public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer) {
-		/*logger.info("Created");*/
+		//logger.info("Created");
 		return new ResponseEntity<Customer>(customerService.addCustomer(customer), HttpStatus.CREATED);
 	}
 
